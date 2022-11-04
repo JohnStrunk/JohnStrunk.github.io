@@ -2,10 +2,10 @@
 author:
   email: john.strunk@gmail.com
   name: John Strunk
-baseurl: https://JohnStrunk.github.io
+baseurl: https://johnstrunk.github.io
 copyright: © John Strunk
 languagecode: en-us
-enablerobotstxt: true
+enablerobotstxt: false
 markup:
   goldmark:
     renderer:
@@ -18,44 +18,44 @@ menu:
       name: Home
       weight: 10
       url: /
-    - identifier: about
-      name: About
-      weight: 20
-      url: /about/
-    - identifier: blog
-      name: Blog
-      weight: 30
-      url: /blog/
-    - identifier: articles
-      name: Articles
-      weight: 40
-      url: /articles/
-    - identifier: projects
-      name: Projects
-      weight: 50
-      url: /projects/
-    - identifier: categories
-      name: Categories
-      weight: 60
-      url: /categories/
-    - identifier: tags
-      name: Tags
-      weight: 70
-      url: /tags/
+    # - identifier: about
+    #   name: About
+    #   weight: 20
+    #   url: /about/
+    # - identifier: blog
+    #   name: Blog
+    #   weight: 30
+    #   url: /blog/
+    # - identifier: articles
+    #   name: Articles
+    #   weight: 40
+    #   url: /articles/
+    # - identifier: projects
+    #   name: Projects
+    #   weight: 50
+    #   url: /projects/
+    # - identifier: categories
+    #   name: Categories
+    #   weight: 60
+    #   url: /categories/
+    # - identifier: tags
+    #   name: Tags
+    #   weight: 70
+    #   url: /tags/
 paginate: 50
 permalinks:
   blog: /blog/:year/:month/:day/:title/
 social:
-  envelope: mailto:example@example.com
-  discord: http://discord.com/users/example
-  github: https://github.com/example
-  facebook: https://facebook.com/example
-  instagram: https://instagram.com/example
-  linkedin: https://www.linkedin.com/in/example
-  reddit: https://reddit.com/u/example
-  twitch: https://www.twitch.tv/example
-  twitter: https://twitter.com/example
-  youtube: https://www.youtube.com/user/example
+  envelope: mailto:john.strunk@gmail.com
+  # discord: http://discord.com/users/example
+  github: https://github.com/JohnStrunk
+  # facebook: https://facebook.com/example
+  # instagram: https://instagram.com/example
+  linkedin: https://www.linkedin.com/in/johnstrunk/
+  # reddit: https://reddit.com/u/example
+  # twitch: https://www.twitch.tv/example
+  twitter: https://twitter.com/TheJohnStrunk
+  # youtube: https://www.youtube.com/user/example
 theme: paige
 timezone: America/New_York
 title: It's my site
