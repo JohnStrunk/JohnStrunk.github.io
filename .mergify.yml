@@ -16,7 +16,7 @@ pull_request_rules:
       - and:
         - or:
           - author=JohnStrunk
-          - author=dependabot
+          - author=dependabot[bot]
         - "#changes-requested-reviews-by=0"
         - label!=do-not-merge
         - check-success="deploy"
