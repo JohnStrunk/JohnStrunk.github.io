@@ -1,32 +1,30 @@
----
+
 pull_request_rules:
-  - name: Automatic merge on approval
-    conditions:
+  - name: Automatic merge on approval + Automatic merge trusted PRs
+    conditions: []
+    actions:
+      queue:
+queue_rules:
+  - name: duplicated default from Automatic merge on approval
+    queue_conditions:
       - "#approved-reviews-by>=1"
       - "#changes-requested-reviews-by=0"
       - label!=do-not-merge
       - check-success="deploy"
-    actions:
-      queue:
-        method: merge
-        name: default
-
-  - name: Automatic merge trusted PRs
-    conditions:
-      - and:
-        - or:
-          - author=JohnStrunk
-          - author=dependabot[bot]
-        - "#changes-requested-reviews-by=0"
-        - label!=do-not-merge
-        - check-success="deploy"
-    actions:
-      queue:
-        method: merge
-        name: default
-
-queue_rules:
-  - name: default
-    conditions:
+    merge_conditions:
       # Conditions to get out of the queue (= merged)
       - check-success="deploy"
+    merge_method: merge
+  - name: duplicated default from Automatic merge trusted PRs
+    queue_conditions:
+      - and:
+          - or:
+              - author=JohnStrunk
+              - author=dependabot[bot]
+          - "#changes-requested-reviews-by=0"
+          - label!=do-not-merge
+          - check-success="deploy"
+    merge_conditions:
+      # Conditions to get out of the queue (= merged)
+      - check-success="deploy"
+    merge_method: merge
